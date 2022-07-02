@@ -1,15 +1,22 @@
 package pro.sky;
 
-public class Car {
+public class Car extends Vehicle implements ServiceStationImpl{
 
-    public String modelName;
-    public int wheelsCount;
 
-    public void updateTyre() {
+    private void updateTyre() {
         System.out.println("Меняем покрышку");
     }
 
-    public void checkEngine() {
+    private void checkEngine() {
         System.out.println("Проверяем двигатель");
+    }
+
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
+        checkEngine();
     }
 }
