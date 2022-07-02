@@ -4,6 +4,11 @@ public class Vehicle {
     private String modelName;
     private int wheelsCount;
 
+    public Vehicle(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
+
     public String getModelName() {
         return modelName;
     }
@@ -12,11 +17,4 @@ public class Vehicle {
         return wheelsCount;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
 }
